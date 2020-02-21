@@ -1,0 +1,281 @@
+{
+    "swagger": "2.0",
+    "title": "Licence Management API Documentation",
+    "description": "Swagger API Documentation for Licence Management MEAN Stack App",
+    "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "1.0.0",
+    "host": "localhost:3000",
+    "basePath": "/api",
+    "tags": [{
+        "name": "Licences",
+        "description": "API for Licence"
+    }],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/Licences": {
+            "post": {
+                "tags": ["Licences"],
+                "summary": "Create new Licence",
+                "description": "Create new Licence in the System",
+                "parameters": [{
+                    "name": "Licence",
+                    "description": "Licence that we want to create Licence",
+                    "in": "body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#definitions/Licence"
+                    }
+                }],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "new Licence is created",
+                        "schema": {
+                            "$ref": "#definitions/Licence"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Licences"],
+                "summary": "FInd all Licences from the server",
+                "description": "All Licences",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#definitions/Licences"
+                        }
+                    }
+                }
+            }
+        },
+        "/Licences/{id}": {
+            "parameters": [{
+                "name": "id",
+                "in": "path",
+                "description": "Id of the Licence",
+                "type": "string"
+            }],
+            "get": {
+                "tags": ["Licences"],
+                "description": "Find the Invocie by id",
+                "summary": "Find single Licence",
+                "responses": {
+                    "200": {
+                        "description": "Licence has found",
+                        "schema": {
+                            "$ref": "#definitions/Licence"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Licences"],
+                "description": "Delete the Invocie by id",
+                "summary": "Delete single Licence",
+                "responses": {
+                    "200": {
+                        "description": "Licence has deleted",
+                        "schema": {
+                            "$ref": "#definitions/Licence"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Licences"],
+                "summary": "Update an Licence",
+                "description": "Update Licence in the System",
+                "parameters": [{
+                    "name": "Licence",
+                    "description": "Licence that we want to udpate",
+                    "in": "body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#definitions/UpdateLicence"
+                    }
+                }],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Licence is updated",
+                        "schema": {
+                            "$ref": "#definitions/Licence"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Licence": {
+            "required": ["enseign, siret, code_naf, numero_tva, telephone, adresse, code_postal, ville, pays, nombre_postes, duree_utilisation, client_email, client_psw, licence, code_licence, etat, site, exercice"],
+            "properties": {
+                "_id": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+                "enseign": {
+                    "type": "String"
+
+                },
+                "siret": {
+                    "type": "String"
+
+                },
+                "code_naf": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "numero_tva": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "telephone": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "adresse": {
+                    "type": "String"
+
+                },
+                "code_postal": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "ville": {
+                    "type": "String"
+
+                },
+                "pays": {
+                    "type": "String"
+
+                },
+                "nombre_postes": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "duree_utilisation": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "client_email": {
+                    "type": "String"
+
+                },
+                "client_psw": {
+                    "type": "String",
+                    "format": "password"
+
+                },
+                "licence": {
+                    "type": "String"
+
+                },
+                "code_licence": {
+                    "type": "String"
+
+                },
+                "etat": {
+                    "type": "String"
+
+                },
+                "site": {
+                    "type": "String"
+
+                },
+                "exercice": {
+                    "type": "String"
+
+                }
+            }
+        },
+        "UpdateLicence": {
+            "properties": {
+                "enseign": {
+                    "type": "String"
+
+                },
+                "siret": {
+                    "type": "String"
+
+                },
+                "code_naf": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "numero_tva": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "telephone": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "adresse": {
+                    "type": "String"
+
+                },
+                "code_postal": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "ville": {
+                    "type": "String"
+
+                },
+                "pays": {
+                    "type": "String"
+
+                },
+                "nombre_postes": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "duree_utilisation": {
+                    "type": "Number",
+                    "format": "int32"
+                },
+                "client_email": {
+                    "type": "String"
+
+                },
+                "client_psw": {
+                    "type": "String",
+                    "format": "password"
+
+                },
+                "licence": {
+                    "type": "String"
+
+                },
+                "code_licence": {
+                    "type": "String"
+
+                },
+                "etat": {
+                    "type": "String"
+
+                },
+                "site": {
+                    "type": "String"
+
+                },
+                "exercice": {
+                    "type": "String"
+
+                }
+            }
+        },
+        "Licences": {
+            "type": "array",
+            "$ref": "#definitions/Licence"
+        }
+    }
+}

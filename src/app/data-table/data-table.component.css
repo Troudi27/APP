@@ -1,0 +1,32 @@
+.full-width-table {
+    width: 90%;
+}
+
+.data-table {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.oo {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 1%;
+}
+
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}

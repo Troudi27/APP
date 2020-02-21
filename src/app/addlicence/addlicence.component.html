@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<div class="cc">
+    <h1>Add licence</h1>
+    <mat-card>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <mat-form-field>
+                        <mat-label>Enseigne</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Siret</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Code_Naf</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+
+
+<div class="cc">
+
+    <mat-card>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <mat-form-field>
+                        <mat-label>Numero_TVA</mat-label>
+                        <input matInput type="number">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Telephone</mat-label>
+                        <span matPrefix>+1 &nbsp;</span>
+                        <input type="tel" matInput placeholder="555-555-1234">
+                        <mat-icon matSuffix>mode_edit</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+
+<div class="cc">
+
+    <mat-card>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Postal Code</mat-label>
+                        <input matInput #postalCode maxlength="5" placeholder="Ex. 94105">
+                        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>City</mat-label>
+                        <input matInput placeholder="Ex. San Francisco">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>pays</mat-label>
+                        <input matInput placeholder="Ex. California">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+
+
+<div class="cc">
+
+    <mat-card>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <mat-form-field>
+                        <mat-label>Nombre_Postes</mat-label>
+                        <input matInput type="number">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Duree_Utilisation</mat-label>
+                        <input matInput type="number">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<div class="cc">
+
+    <mat-card>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col ">
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Etat</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Site</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field>
+                        <mat-label>Exercice</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </div>
+    </mat-card>
+    <br>
+    <div class="d-flex justify-content-around">
+        <button mat-raised-button color="primary">Creat</button>
+    </div>
+</div>
